@@ -22,11 +22,11 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
-//         .target(
-//             name: "RxSwiftWidgets",
-//             dependencies: ["RxSwift", "RxCocoa"]),
-//         .testTarget(
-//             name: "RxSwiftWidgetsTests",
-//             dependencies: ["RxSwiftWidgets","RxSwift", "RxCocoa"]),
+        .target(
+            name: "RxSwiftWidgets",
+            dependencies: []),
+        .testTarget(
+            name: "RxSwiftWidgetsTests",
+            dependencies: ["RxSwiftWidgets"]),
     ]
 )

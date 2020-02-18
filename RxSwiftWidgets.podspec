@@ -16,14 +16,9 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "RxSwiftWidgets"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "RxSwiftWidgets, a good declarative UIKit"
 
-  # This description is used to generate tags and improve search results.
-  #   * Think: What does it do? Why did you write it? What is the focus?
-  #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between the DESC delimiters below.
-  #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = "very well"
   spec.homepage     = "www.google.com"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -50,10 +45,8 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "tomas" => "dei.tomaschen@gmail.com" }
+  spec.author             = { "tomas" => "chenjuixie@gmail.com" }
   # Or just: spec.author    = "tomas"
-  # spec.authors            = { "tomas" => "dei.tomaschen@gmail.com" }
-  # spec.social_media_url   = "https://twitter.com/tomas"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -77,17 +70,9 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/QiProject/RxSwiftWidgets.git", :tag => spec.version }
+  spec.source       = { :git => "https://github.com/QiProject/RxSwiftWidgets.git", :tag => spec.version.to_s }
 
-
-  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any swift, h, m, mm, c & cpp files.
-  #  For header files it will include any header in the folder.
-  #  Not including the public_header_files will make all headers public.
-  #
-
+  spec.requires_arc = true
   spec.source_files  = "Sources/RxSwiftWidgets", "Sources/RxSwiftWidgets/**/*.{swift}"
   spec.exclude_files = "Classes/Exclude"
 
@@ -108,13 +93,7 @@ Pod::Spec.new do |spec|
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
-  # spec.framework  = "SomeFramework"
+  spec.framework  = "UIKit"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
   # spec.library   = "iconv"
@@ -127,7 +106,6 @@ Pod::Spec.new do |spec|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
